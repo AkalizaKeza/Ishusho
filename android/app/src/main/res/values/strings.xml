@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ishusho</string>
+
+    <!-- Config -->
+    <string name="project_id">Ishusho</string>
+    <string name="server_client_id">###.apps.googleusercontent.com</string>
+    <string name="server_client_id_web">###.apps.googleusercontent.com</string>
+    <string name="firebase_storage">###.appspot.com</string>
+    <string name="server_widget_url">http://www.google.com</string>
+
+    <!-- Buttons and fields -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Ijambo ry\'ibanga</string>
+    <string name="action_upload">Upload</string>
+    <string name="action_makecomic">Use Comic Maker</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="action_explore">Gerageza Ishusho</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="error_invalid_email">Iyo imeyili ntabyo ariyo</string>
+    <string name="error_invalid_password">Iyo ijambo ry\'ibanga ntabyo ariyo</string>
+    <string name="error_incorrect_password">Iyo ijambo ry\'ibanga ntabyo ariyo</string>
+    <string name="error_field_required">This field is required</string>
+
+    <!-- Activity titles -->
+    <string name="title_activity_main">Ishusho</string>
+    <string name="title_activity_feedback">Tanga ibitekerezo byawe...</string>
+    <string name="title_activity_display_feedback">Ibitekerezo byawe</string>
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="title_activity_new_post">New Post</string>
+    <string name="title_activity_user_detail">User details</string>
+    <string name="title_activity_show_list">List</string>
+    <string name="title_activity_download">Download</string>
+    <string name="title_activity_create">Create</string>
+    <string name="title_activity_profile">Profile</string>
+
+    <!-- Fragment / Tab titles -->
+    <string name="title_fragment_posts">Amashusho</string>
+    <string name="title_fragment_artists">Abanyabugeni</string>
+    <string name="title_fragment_favourites">Ibikunzwe</string>
+
+    <!-- Menu items -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_account">Account</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_send">Kohereza</string>
+    <string name="action_yes">Yego</string>
+    <string name="action_no">Oya</string>
+    <string name="action_ok">Yego</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="language_select_rw">Ikinyarwanda</string>
+    <string name="language_select_en">English</string>
+
+    <string name="editText">Tanga hano…</string>
+
+    <string name="sponsored">Kwamamaza</string>
+    <string name="popular">Ibikunzwe</string>
+    <string name="recent">Iyavuba</string>
+
+    <!-- ComicMaker -->
+    <string name="add">Ongera ifoto</string>
+    <string name="add_pack">Ongera sticker</string>
+    <string name="add_other">Ongera iyindi source</string>
+    <string name="scale">Scale</string>
+    <string name="clear">Clear</string>
+    <string name="exit">Exit</string>
+    <string name="load">Load</string>
+    <string name="pack">Pack: </string>
+    <string name="settings">Settings</string>
+    <string name="settings_title">Comic Settings</string>
+    <string name="panel_count">Panel count:</string>
+    <string name="about">About</string>
+    <string name="zoom">Kongera ingano</string>
+    <string name="redo">Subiramo</string>
+    <string name="remove">Gusiba</string>
+    <string name="share">Gukwiza</string>
+    <string name="mode_hand">Kwimura</string>
+    <string name="mode_pencil">Gushushanya</string>
+    <string name="mode_text">Andika</string>
+    <string name="mode_line">Akarongo</string>
+    <string name="mode_eraser">Gusiba</string>
+    <string name="mode_select_title">Hitamo interaction mode</string>
+    <string name="image_select_title">Hitamo ifoto kongeraho</string>
+    <string name="toback">Send to back</string>
+    <string name="tofront">Bring to front</string>
+    <string name="pen_color">Ibara ya pen</string>
+    <string name="pen_width">Pen width</string>
+    <string name="text_color">Ibara ya irangi</string>
+    <string name="text_type">Ubwoko bw\'inyandiko</string>
+    <string name="select_image">Hitamo ifoto</string>
+    <string name="select_font">Hitamo bwoko bw\'inyandiko</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
+    <string name="flipV">Flip vertically</string>
+    <string name="flipH">Flip horizontally</string>
+    <string name="settings_bg_color_confirm">Ibara</string>
+    <string name="settings_default_color_confirm">Use Previous</string>
+    <string name="settings_bg_color_dialog">Hitamo ibara</string>
+    <string name="about_title">Ishusho</string>
+    <string name="report_bug">Report a bug</string>
+    <string name="home_page">Home Page</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="clear_question">Clear comic?</string>
+    <string name="select_object_first">Hitamo ijambo cyangwa ifoto imbere!</string>
+    <string name="select_picture">Hitamo ifoto</string>
+    <string name="select_name">Enter file name</string>
+    <string name="select_folder">Hitamo Folder</string>
+    <string name="select_layer_title">Hitamo layer</string>
+    <string name="select_layer_message">Please select if you want to add ifoto front or behind the draw canvas.\nNOTE: You can change this later.</string>
+    <string name="select_width">Pick a width</string>
+    <string name="select_zoom">Pick zoom level: </string>
+    <string name="to_front">To front</string>
+    <string name="to_back">To back</string>
+    <string name="draw_grid">Draw grid</string>
+    <string name="enter_text">Enter text</string>
+    <string name="comic_saved_as">Comic saved as </string>
+    <string name="comic_save_fail_1">Sorry, the comic could not be saved!</string>
+    <string name="comic_save_fail_2">There an error while saving the comic: </string>
+    <string name="error_adding_image">There an error adding the image!</string>
+    <string name="saved_end"> mu Pictures folder.</string>
+    <string name="confirm_exit">Are you sure you want to exit?</string>
+    <string name="object_menu">Object Menu</string>
+    <string name="built_in">Built-in images</string>
+    <string name="orientation">Orientation</string>
+    <string name="rotate_auto">Automatic</string>
+    <string name="rotate_portrait">Portrait</string>
+    <string name="rotate_landscape">Landscape</string>
+    <string name="save_format">Imiterere</string>
+    <string name="black">Mukara</string>
+    <string name="white">Umwera</string>
+    <string name="lock">Gufunga/Gufungura</string>
+    <string name="drafts">Drafts</string>
+    <string name="draft_options">Draft options</string>
+    <string name="autoload_question">Load last comic?</string>
+    <string name="about_text">Ishusho</string>
+    <string name="title_activity_comicmaker">Comic Maker</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Content Description for images -->
+    <string name="welcome_screen_text">Murakaze neza kw\'Ishusho</string>
+    <string name="show_gallery_button_text">Amashusho</string>
+    <string name="drawer_profile_title">Profile</string>
+    <string name="drawer_settings_title">Settings</string>
+    <string name="drawer_your_gallery_title">Amashusho yawe</string>
+    <string name="invite_friends_button_text">Invite inshuti byawe</string>
+    <string name="my_art_button_text">My posts</string>
+    <string name="follow_user_error">Unable to follow user.</string>
+    <string name="picture_chooser_title">Hitamo cyangwa fata ifoto</string>
+    <string name="new_comment_hint">Enter new comment</string>
+    <string name="new_art_location_placeholder">Getting location...</string>
+    <string name="user_info_no_name">Unknown user</string>
+    <string name="error_required_field">Required</string>
+    <string name="error_upload_task_create">Couldn\'t create upload task.</string>
+    <string name="default_progress_message">Mutegereze...</string>
+    <string name="profile_progress_message">Signing in...</string>
+    <string name="art_upload_progress_message">Uploading...</string>
+    <string name="user_logged_out_error">You must be logged in to do that.</string>
+    <string name="error_user_not_signed_in">Error user not signed in.</string>
+
+</resources>

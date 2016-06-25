@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources></resources>
+
+    <!-- TODO Uncomment this when the #LANGUAGE buttons are working
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!- Buttons and fields -
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_upload">Upload</string>
+    <string name="action_makecomic">Use Comic Maker</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Register</string>
+    <string name="action_explore">Explore</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This phone number is invalid</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!- Activity titles -
+    <string name="title_activity_main">Ishusho</string>
+    <string name="title_activity_feedback">Enter your feedback here…</string>
+    <string name="title_activity_display_feedback">Your Message</string>
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="title_activity_new_art">New art</string>
+    <string name="title_activity_user_detail">User details</string>
+    <string name="title_activity_show_list">Show List</string>
+    <string name="title_activity_download">Download</string>
+    <string name="title_activity_create">Create</string>
+    <string name="title_activity_profile">Profile</string>
+
+    <!- Fragment / Tab titles -
+    <string name="title_fragment_posts">Artwork</string>
+    <string name="title_fragment_artists">Artists</string>
+    <string name="title_fragment_favourites">Favourites</string>
+
+    <!- Menu items -
+    <string name="menu_settings">Settings</string>
+    <string name="menu_account">Account</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_send">Send</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="action_ok">Ok</string>
+    <string name="action_cancel">Cancel</string>
+
+    <string name="editText">Write here…</string>
+
+    <string name="sponsored">Sponsored</string>
+    <string name="popular">Popular</string>
+    <string name="recent">Recent</string>
+
+    <!- ComicMaker -
+    <string name="add">Add Image</string>
+    <string name="add_pack">Add a sticker</string>
+    <string name="add_other">Add from other source</string>
+    <string name="scale">Scale</string>
+    <string name="clear">Clear</string>
+    <string name="exit">Exit</string>
+    <string name="load">Load</string>
+    <string name="pack">Pack: </string>
+    <string name="settings">Settings</string>
+    <string name="settings_title">Comic Settings</string>
+    <string name="panel_count">Panel count:</string>
+    <string name="about">About</string>
+    <string name="zoom">Set zoom</string>
+    <string name="redo">Redo</string>
+    <string name="remove">Remove</string>
+    <string name="share">Share</string>
+    <string name="mode_hand">Manipulate mode</string>
+    <string name="mode_pencil">Free draw mode</string>
+    <string name="mode_text">Type mode</string>
+    <string name="mode_line">Line mode</string>
+    <string name="mode_eraser">Eraser mode</string>
+    <string name="mode_select_title">Select interaction mode</string>
+    <string name="image_select_title">Select image to add</string>
+    <string name="toback">Send to back</string>
+    <string name="tofront">Bring to front</string>
+    <string name="pen_color">Pen color</string>
+    <string name="pen_width">Pen width</string>
+    <string name="text_color">Text color</string>
+    <string name="text_type">Text type</string>
+    <string name="select_image">Select Image</string>
+    <string name="select_font">Select Font Type</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
+    <string name="flipV">Flip vertically</string>
+    <string name="flipH">Flip horizontally</string>
+    <string name="settings_bg_color_confirm">Use Color</string>
+    <string name="settings_default_color_confirm">Use Previous</string>
+    <string name="settings_bg_color_dialog">Select Color</string>
+    <string name="abouttitle">Ishusho</string>
+    <string name="report_bug">Report a bug</string>
+    <string name="home_page">Home Page</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="clear_question">Clear comic?</string>
+    <string name="select_object_first">Please select text or an image first!</string>
+    <string name="select_picture">Select picture</string>
+    <string name="select_name">Enter file name</string>
+    <string name="select_folder">Select Folder</string>
+    <string name="select_layer_title">Select layer</string>
+    <string name="select_layer_message">Please select if you want to add the image in front or behind the draw canvas.\nNOTE: You can change this later.</string>
+    <string name="select_width">Pick a width</string>
+    <string name="select_zoom">Pick zoom level: </string>
+    <string name="to_front">To front</string>
+    <string name="to_back">To back</string>
+    <string name="draw_grid">Draw grid</string>
+    <string name="enter_text">Enter text</string>
+    <string name="comic_saved_as">Comic saved as </string>
+    <string name="comic_save_fail_1">Sorry, the comic could not be saved: generated bitmap is null!</string>
+    <string name="comic_save_fail_2">There was an error while saving the comic: </string>
+    <string name="error_adding_image">There was an error adding the image!</string>
+    <string name="saved_end"> in the Pictures folder. It should appear in the gallery shortly.</string>
+    <string name="confirm_exit">Are you sure you want to exit?</string>
+    <string name="object_menu">Object Menu</string>
+    <string name="built_in">Built-in images</string>
+    <string name="orientation">Orientation</string>
+    <string name="rotate_auto">Automatic</string>
+    <string name="rotate_portrait">Portrait</string>
+    <string name="rotate_landscape">Landscape</string>
+    <string name="saveformat">Save format</string>
+    <string name="black">Black</string>
+    <string name="white">White</string>
+    <string name="lock">Lock/Unlock</string>
+    <string name="drafts">Drafts</string>
+    <string name="draft_options">Draft options</string>
+    <string name="autoload_question">Load last comic?</string>
+    <string name="about_text"></string>
+    <string name="title_activity_comicmaker">Comic Maker</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!- Content Description for images -
+    <string name="desc_google_icon">Google Logo</string>
+    <string name="welcome_screen_text">Welcome to Ishusho</string>
+    <string name="show_gallery_button_text">Show Gallery</string>
+    <string name="drawer_profile_title">Profile</string>
+    <string name="drawer_settings_title">Settings</string>
+    <string name="drawer_your_gallery_title">Your Gallery</string>
+    <string name="invite_friends_button_text">Invite your friends</string>
+    <string name="my_art_button_text">My artwork</string>
+    <string name="follow_user_error">Unable to follow user.</string>
+    <string name="picture_chooser_title">Select or take picture to post</string>
+    <string name="new_comment_hint">Enter new comment</string>
+    <string name="new_art_location_placeholder">Getting location...</string>
+    <string name="user_info_no_name">Unknown user</string>
+    <string name="error_required_field">Required</string>
+    <string name="error_upload_task_create">Couldn\'t create upload task.</string>
+    <string name="default_progress_message">Please wait...</string>
+    <string name="profile_progress_message">Signing in...</string>
+    <string name="art_upload_progress_message">Uploading...</string>
+    <string name="user_logged_out_error">You must be logged in to do that.</string>
+    <string name="error_user_not_signed_in">Error user not signed in.</string>
+
+</resources>
+-->
