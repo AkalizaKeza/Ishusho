@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity implements
         Tab1Gallery.OnFragmentInteractionListener,
         Tab2Artists.OnFragmentInteractionListener,
         Tab3Create.OnFragmentInteractionListener,
-        Tab4Profile.OnFragmentInteractionListener{
+        Tab4Profile.OnFragmentInteractionListener,
+        NewPostUploadTaskFragment.OnFragmentInteractionListener{
 
     private Toolbar toolbar;
     private TabLayout tabLayout;

@@ -219,12 +219,24 @@ public class Tab4Profile extends Fragment implements
     @Override
     public void onStart() {
         super.onStart();
+
+        if (mGoogleApiClient != null)
+            mGoogleApiClient.connect();
+
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null && !currentUser.isAnonymous()) {
             showSignedInUI(currentUser);
         } else {
             showSignedOutUI();
         }
+    }
+
+    @Override
+    public void onStop() {
+        if (mGoogleApiClient != null && mGoogleApiClient.isConnected()) {
+            mGoogleApiClient.disconnect();
+        }
+        super.onStop();
     }
 
     public interface OnFragmentInteractionListener {

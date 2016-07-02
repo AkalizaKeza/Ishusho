@@ -35,7 +35,7 @@ class FirebaseUtil {
         return null;
     }
 
-    public static Artist getAuthor() {
+    public static Artist getArtist() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) return null;
         return new Artist(user.getDisplayName(), user.getPhotoUrl().toString(), user.getUid());

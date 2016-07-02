@@ -75,7 +75,7 @@ public class NewPostUploadTaskFragment extends Fragment {
         // Retain this fragment across config changes.
         setRetainInstance(true);
     }
-/*
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -93,7 +93,7 @@ public class NewPostUploadTaskFragment extends Fragment {
         super.onDetach();
         mCallbacks = null;
     }
-*/
+
     public void setSelectedBitmap(Bitmap bitmap) {
         this.selectedBitmap = bitmap;
     }
@@ -152,7 +152,7 @@ public class NewPostUploadTaskFragment extends Fragment {
                 return null;
             }
             FirebaseStorage storageRef = FirebaseStorage.getInstance();
-            StorageReference photoRef = storageRef.getReferenceFromUrl("gs://" + getString(R.string.firebase_storage));
+            StorageReference photoRef = storageRef.getReferenceFromUrl("gs://" + getString(R.string.google_storage_bucket));
 
 
             Long timestamp = System.currentTimeMillis();
@@ -173,43 +173,43 @@ public class NewPostUploadTaskFragment extends Fragment {
                     thumbnail.compress(Bitmap.CompressFormat.JPEG, 70, thumbnailStream);
                     thumbnailRef.putBytes(thumbnailStream.toByteArray())
                             .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                            final DatabaseReference ref = FirebaseUtil.getBaseRef();
-                            DatabaseReference postsRef = FirebaseUtil.getPostsRef();
-                            final String newPostKey = postsRef.push().getKey();
-                            final Uri thumbnailUrl = taskSnapshot.getDownloadUrl();
-
-                            Artist artist = FirebaseUtil.getAuthor();
-                            if (artist == null) {
-                                FirebaseCrash.logcat(Log.ERROR, TAG, "Couldn't upload post: Couldn't get signed in user.");
-                                mCallbacks.onPostUploaded(mApplicationContext.getString(
-                                        R.string.error_user_not_signed_in));
-                                return;
-                            }
-                            Post newPost = new Post(artist, fullSizeUrl.toString(), fullSizeRef.toString(),
-                                    thumbnailUrl.toString(), thumbnailRef.toString(), postText, ServerValue.TIMESTAMP);
-
-                            Map<String, Object> updatedUserData = new HashMap<>();
-                            updatedUserData.put(FirebaseUtil.getPeoplePath() + artist.getUid() + "/posts/"
-                                    + newPostKey, true);
-                            updatedUserData.put(FirebaseUtil.getPostsPath() + newPostKey,
-                                    new ObjectMapper().convertValue(newPost, Map.class));
-                            ref.updateChildren(updatedUserData, new DatabaseReference.CompletionListener() {
                                 @Override
-                                public void onComplete(DatabaseError firebaseError, DatabaseReference databaseReference) {
-                                    if (firebaseError == null) {
-                                        mCallbacks.onPostUploaded(null);
-                                    } else {
-                                        Log.e(TAG, "Unable to create new post: " + firebaseError.getMessage());
-                                        FirebaseCrash.report(firebaseError.toException());
+                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                    final DatabaseReference ref = FirebaseUtil.getBaseRef();
+                                    DatabaseReference postsRef = FirebaseUtil.getPostsRef();
+                                    final String newPostKey = postsRef.push().getKey();
+                                    final Uri thumbnailUrl = taskSnapshot.getDownloadUrl();
+
+                                    Artist artist = FirebaseUtil.getArtist();
+                                    if (artist == null) {
+                                        FirebaseCrash.logcat(Log.ERROR, TAG, "Couldn't upload post: Couldn't get signed in user.");
                                         mCallbacks.onPostUploaded(mApplicationContext.getString(
-                                                R.string.error_upload_task_create));
+                                                R.string.error_user_not_signed_in));
+                                        return;
                                     }
+                                    Post newPost = new Post(artist, fullSizeUrl.toString(), fullSizeRef.toString(),
+                                            thumbnailUrl.toString(), thumbnailRef.toString(), postText, ServerValue.TIMESTAMP);
+
+                                    Map<String, Object> updatedUserData = new HashMap<>();
+                                    updatedUserData.put(FirebaseUtil.getPeoplePath() + artist.getUid() + "/posts/"
+                                            + newPostKey, true);
+                                    updatedUserData.put(FirebaseUtil.getPostsPath() + newPostKey,
+                                            new ObjectMapper().convertValue(newPost, Map.class));
+                                    ref.updateChildren(updatedUserData, new DatabaseReference.CompletionListener() {
+                                        @Override
+                                        public void onComplete(DatabaseError firebaseError, DatabaseReference databaseReference) {
+                                            if (firebaseError == null) {
+                                                mCallbacks.onPostUploaded(null);
+                                            } else {
+                                                Log.e(TAG, "Unable to create new post: " + firebaseError.getMessage());
+                                                FirebaseCrash.report(firebaseError.toException());
+                                                mCallbacks.onPostUploaded(mApplicationContext.getString(
+                                                        R.string.error_upload_task_create));
+                                            }
+                                        }
+                                    });
                                 }
-                            });
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
+                            }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             FirebaseCrash.logcat(Log.ERROR, TAG, "Failed to upload post to database.");
