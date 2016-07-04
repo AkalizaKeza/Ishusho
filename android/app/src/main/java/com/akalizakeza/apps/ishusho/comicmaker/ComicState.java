@@ -49,7 +49,7 @@ public class ComicState {
     public Vector<float[]> linePoints = new Vector<float[]>();
     public LinkedList<Paint> mLinePaints = new LinkedList<Paint>();
     public float[] currentLinePoints = null;
-    public int mPanelCount = 4;
+    public int mPanelCount = 1;
     public int currentColor = Color.BLACK;
     public boolean drawGrid = true;
 }
