@@ -7,7 +7,7 @@
     <string name="server_client_id">###.apps.googleusercontent.com</string>
     <string name="server_client_id_web">###.apps.googleusercontent.com</string>
     <string name="firebase_storage">###.appspot.com</string>
-    <string name="server_widget_url">http://www.google.com</string>
+<string name="server_widget_url">http://www.google.com</string>
 
     <!-- Buttons and fields -->
     <string name="prompt_email">Email</string>

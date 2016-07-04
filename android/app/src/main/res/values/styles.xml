@@ -14,7 +14,6 @@
 
     <style name="AppTheme.NoActionBar.Fullscreen">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:background">@color/colorPrimaryDark</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -32,9 +31,10 @@
     </style>
 
     <style name="WelcomeScreenHeaderTextStyle">
-        <item name="android:textSize">50sp</item>
+        <item name="android:textSize">48sp</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">@color/colorPrimaryDark</item>
         <item name="android:layout_marginBottom">60dp</item>
     </style>
 
