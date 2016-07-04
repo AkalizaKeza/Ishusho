@@ -22,17 +22,9 @@
     </android.support.design.widget.AppBarLayout>
 
     <com.akalizakeza.apps.ishusho.comicmaker.ComicEditor android:id="@+id/editor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryLight" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/feedbackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email"
-        android:visibility="gone" /> <!-- Hide feedback button -->
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>
